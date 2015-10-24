@@ -11,14 +11,14 @@
     ...
 
     func CreateUser(w http.ResponseWriter, r *http.Request) {
-        vr := NewRequestFromHttp(r, "WebServer", "PostUser")
+        vr := vchain.NewRequestFromHttp(r, "WebServer", "PostUser")
 
         ...
 
         // invoke account service
         client := &http.Client{}
         req, _ := http.NewRequest(...)
-        WrapHttpRequest(req, NewChainHeader(vr.Uuid, true))
+        vchain.WrapHttpRequest(req, vchain.NewChainHeader(vr.Uuid, true))
         res, _ := client.Do(req)
 
         ...
