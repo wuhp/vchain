@@ -1,4 +1,6 @@
 # vchain
+Go client for vchain server, should be integated with end user's application.
+Usually it can be implemented as a middleware in web application.
 
 ## http sample
 
